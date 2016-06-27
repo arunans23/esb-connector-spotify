@@ -31,6 +31,13 @@
             <then>
                 <property name="uri.var.apiParameters"
                           expression="fn:concat(get-property('uri.var.apiParameters'),'?uris=',get-property('uri.var.uris'))"/>
+                <payloadFactory media-type="json">
+                    <format>
+                        {
+                        }
+                    </format>
+                    <args/>
+                </payloadFactory>
             </then>
             <else>
                 <property name="messageType" value="application/json" scope="axis2"/>

@@ -254,7 +254,7 @@ public class SpotifyConnectorIntegrationTest extends ESBIntegrationTest {
         proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
         try {
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(responseHeader == 404);
+            Assert.assertTrue(responseHeader == 400);
         } finally {
             proxyAdmin.deleteProxy(methodName);
         }
@@ -396,7 +396,7 @@ public class SpotifyConnectorIntegrationTest extends ESBIntegrationTest {
         proxyAdmin.addProxyService(new DataHandler(new URL(proxyFilePath)));
         try {
             int responseHeader = ConnectorIntegrationUtil.sendRequestToRetriveHeaders(getProxyServiceURL(methodName), jsonString);
-            Assert.assertTrue(responseHeader == 404);
+            Assert.assertTrue(responseHeader == 400);
         } finally {
             proxyAdmin.deleteProxy(methodName);
         }
@@ -793,7 +793,7 @@ public class SpotifyConnectorIntegrationTest extends ESBIntegrationTest {
         JSONObject jsonResponse;
         try {
             jsonResponse = ConnectorIntegrationUtil.sendRequest(getProxyServiceURL(methodName), jsonString);
-            Assert.assertEquals(jsonResponse.getJSONObject("error").getString("message"), "non existing id");
+            Assert.assertEquals(jsonResponse.getJSONObject("error").getString("message"), "invalid id");
         } finally {
 
             proxyAdmin.deleteProxy(methodName);

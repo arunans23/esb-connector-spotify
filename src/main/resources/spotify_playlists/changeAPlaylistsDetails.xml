@@ -33,9 +33,7 @@
                         {
                         }
                     </format>
-                    <args>
-                        <arg expression="get-property('uri.var.name')"/>
-                    </args>
+                    <args/>
                 </payloadFactory>
             </then>
             <else>
@@ -85,8 +83,7 @@
                 </filter>
             </else>
         </filter>
-        <property name="messageType" value="application/json"
-                  scope="axis2"/>
+        <property name="messageType" value="application/json" scope="axis2"/>
         <header name="Content-Type" value="application/json" scope="transport"/>
         <call>
             <endpoint>
