@@ -4,12 +4,12 @@ Pre-requisites:
 - Java 1.6 or above
 
 Tested Platform:
-- Mac OSx 10.9
-- WSO2 ESB 4.9.0
+- Mac OSx 10.9, Mac OSx 10.10.3
+- WSO2 ESB 5.0.0-SNAPSHOT
 - Java 1.7
 
 STEPS:
-1. Download ESB 4.9.0 from official website and make sure the wso2esb-4.9.0.zip file at "<SPOTIFY_CONNECTOR_HOME>/repository/".
+1. Download ESB 5.0.0-SNAPSHOT from official website. Extract the ESB and put "-XX:-UseSplitVerifier" under $JVM_MEM_OPTS into {ESB_HOME}/bin/wso2server.sh.
 
 2. Make these changes in ESB.
 	- import the Spotify CERTIFICATE to your ESB client’s keystore.
@@ -34,7 +34,7 @@ STEPS:
      <messageBuilder contentType="text/plain"
                             class="org.wso2.carbon.relay.BinaryRelayBuilder"/>
 
-4. Copy wso2esb-4.9.0.zip file in to location "{SPOTIFY_CONNECTOR_HOME}/repository/".
+4. Copy wso2esb-5.0.0-SNAPSHOT.zip file in to location "{SPOTIFY_CONNECTOR_HOME}/repository/".
 
 5. Copy proxy files to following location "{SPOTIFY_CONNECTOR_HOME}/src/test/resources/artifacts/ESB/config/proxies/spotify/"
 
