@@ -48,7 +48,7 @@ public class SpotifyConnectorIntegrationTest extends ESBIntegrationTest {
 
     private String repoLocation = null;
 
-    private String spotifyConnectorFileName = CONNECTOR_NAME + "-connector-1.0.1.zip";
+    private String spotifyConnectorFileName = CONNECTOR_NAME + "-connector-1.0.2-SNAPSHOT.zip";
 
     private Properties spotifyConnectorProperties = null;
 
